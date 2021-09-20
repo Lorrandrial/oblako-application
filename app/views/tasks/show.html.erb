@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<h2>Todos</h2>
+
+<% for post in @task.todos %>
+
+<ul>
+
+<li><%= todo.body %></li>
+
+</ul>
+
+<% end %>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Add Todo', task_todos_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
